@@ -1,0 +1,94 @@
+<html lang="en" dir="ltr">
+    <head>
+      <title> Idle Space Explorer </title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--------------------TOP BAR---------------------------------->
+        <div class="topbar">
+            <div class="lefttopbar">
+                <div class="title">Idle Space Explorer</div>
+                <div class="author">by Poupy</div>
+                <div class="version">ver. 0.0.0.a</div>
+            </div>
+            <div class="midtopbar">
+                <div class="msg">Msg of the day
+                    <span class="tooltip">Hello world, this message is a test!</span>
+                </div>
+            </div>
+            <div class="righttopbar">
+                <button onclick=save() class="topbar_button">Save</button>
+                <button class="topbar_button">Options</button>
+                <button onclick=reset() class="topbar_button">Reset</button>
+            </div>
+        </div>
+        <!--------------------CLICKER AREA---------------------------------->
+        <div class="clicker">
+            <div class="production-area">
+                <p>Dark energy per click: 1</p>
+                <p>Dark energy production: 0 /s</p>
+            </div>
+            <div class="clicker_button-area">
+                <p id="DE">Dark Energy: 0</p>
+                <button onclick="gatherDE()" class="clicker_button"> Gather<br> Dark <br>Energy</button>
+            </div>
+            <div class="logbook-area">
+                <div class="logbooktitle">LOGBOOK</div>
+                <textarea id="logs" class="logbook">></textarea>
+            </div>
+        </div>
+        <div class="tabs">
+            <div id="menubuttons" class="tab">
+                <button onclick="tab('mainpage')" class="tab_button">Vessel Status</button>
+                <button onclick="tab('researchlabpage')" class="tab_button">Research Lab</button>
+                <button onclick="tab('testtab')" class="tab_button">Test Tab</button>
+            </div>
+        </div>
+        <!--------------------VESSEL STATUS---------------------------------->
+        <div id="mainpage" class="menupages">
+            <div class="menutitle"> Vessel Status</div>
+            <p id="DEperclick" class="clicker_button-area-sub">Dark energy per click: 1</p>
+            <p id="DEpersec" class="clicker_button-area-sub">Dark energy production: 0 /s</p>
+        </div>
+        <!--------------------RESEARCH LAB---------------------------------->
+        <div id="researchlabpage" class="menupages">
+            <div class="menutitle"> Research Lab</div>
+            <div class="buyable">
+                <div id="DEperclickupgrade" class="buyable_amount"> 1 </div>
+                <div class="buyable_text">
+                    <div class="buyable_title">
+                        <span class="buyable_title-text"> Manual Collector </span>
+                        <span id="DEperclickupgradecost" class="buyable_title-price"> 10 Dark Energy </span>
+                    </div>
+                    <div class="buyable_description"> Use dark energy to synthesize a better manual collector</div>
+                    <div class="buyable_effect"> Adds 1 Dark Energy per click </div>
+                </div>
+                <button onclick="buyDEperclick()" class="buyable_button"> Buy </button>
+            </div>
+            <div class="buyable">
+                <div id="DEpersecupgrade" class="buyable_amount"> 0 </div>
+                <div class="buyable_text">
+                    <div class="buyable_title">
+                        <span class="buyable_title-text"> Auto Collector </span>
+                        <span id="DEpersecupgradecost" class="buyable_title-price"> 20 Dark Energy </span>
+                    </div>
+                    <div class="buyable_description"> Use dark energy to synthesize an automatic collector</div>
+                    <div class="buyable_effect"> Gather 1 Dark Energy per second </div>
+                </div>
+                <button onclick="buyDEpersec()" class="buyable_button"> Buy </button>
+            </div>
+        </div>
+        <!--------------------TEST TAB---------------------------------->
+        <div id="testtab" class="menupages">
+            <div class="menutitle"> Test Tab</div>
+        </div>
+
+        <script src="main.js" charset="utf-8" type="text/javascript"></script>
+    </body>
+</html>
+  
+  
