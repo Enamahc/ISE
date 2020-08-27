@@ -51,7 +51,7 @@ function getPhrase(){
 
 function logloop() {
     getPhrase();
-    setTimeout(logloop, Math.random() * 5000)
+    setTimeout(logloop, Math.random() * 10000)
 }
 logloop()
 
