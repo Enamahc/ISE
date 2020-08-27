@@ -8,6 +8,9 @@ var gamedata = {
     DEperclickcost: 10,
     DEperseccost: 20,
     DEpersec: 0,
+    shiproomsize: 1,
+    shiproomused: 1,
+    shiphullsize: 6,
     lasttick: Date.now()
 }
 
@@ -35,17 +38,17 @@ function tab(tab){
 tab("mainpage")
 
 var logs = new Array(
-    "> Donec tellus mi, luctus vitae semper ut, tristique tincidunt justo.",
-    "> Aenean porttitor aliquam molestie.",
-    "> Mauris hendrerit, nulla porta sollicitudin blandit, enim nisi blandit est, et condimentum erat augue sed eros.",
-    "> Vestibulum bibendum enim eu venenatis consectetur.",
-    "> Suspendisse scelerisque, dui eu consectetur egestas, lorem sem accumsan justo, sit amet blandit tellus lacus quis augue. Mauris volutpat vel justo ac molestie. Curabitur tempor laoreet laoreet.",
-    "> Phasellus lorem urna, maximus ut placerat nec, suscipit et elit.",
-    "> Nam pulvinar pellentesque faucibus.",
-    "> Suspendisse potenti.",
-    "> Sed aliquam nunc ex, sed eleifend lectus rhoncus ac.",
-    "> Praesent sit amet ligula urna.",
-    "> In pellentesque diam nisi, sed pulvinar neque rutrum ac. Maecenas porttitor lorem cursus, pellentesque mi ut, interdum ipsum. Sed dictum lorem pulvinar iaculis efficitur. Aliquam erat volutpat. " );
+    " > Donec tellus mi, luctus vitae semper ut, tristique tincidunt justo.",
+    " > Aenean porttitor aliquam molestie.",
+    " > Mauris hendrerit, nulla porta sollicitudin blandit, enim nisi blandit est, et condimentum erat augue sed eros.",
+    " > Vestibulum bibendum enim eu venenatis consectetur.",
+    " > Suspendisse scelerisque, dui eu consectetur egestas, lorem sem accumsan justo, sit amet blandit tellus lacus quis augue. Mauris volutpat vel justo ac molestie. Curabitur tempor laoreet laoreet.",
+    " > Phasellus lorem urna, maximus ut placerat nec, suscipit et elit.",
+    " > Nam pulvinar pellentesque faucibus.",
+    " > Suspendisse potenti.",
+    " > Sed aliquam nunc ex, sed eleifend lectus rhoncus ac.",
+    " > Praesent sit amet ligula urna.",
+    " > In pellentesque diam nisi, sed pulvinar neque rutrum ac. Maecenas porttitor lorem cursus, pellentesque mi ut, interdum ipsum. Sed dictum lorem pulvinar iaculis efficitur. Aliquam erat volutpat. " );
 
 function getlog(){
     document.getElementById("logs").value = logs[Math.floor(Math.random() * logs.length)] + "\n" + document.getElementById("logs").value ;
@@ -53,7 +56,7 @@ function getlog(){
 
 function logloop() {
     if (gamedata.newgame == 1) {
-        document.getElementById("logs").value = "> Goodmorning Commander. Or evening? Wait, what time is it? Wait... what 'time' even is?"
+        document.getElementById("logs").value = " > Goodmorning Commander. Or evening? Wait, what time is it? Wait... what 'time' even is?"
         gamedata.newgame = 0;
     } else {
         getlog()
@@ -99,7 +102,7 @@ var maingameloop = window.setInterval(function() {
 }, 1000)
 
 var savegameloop = window.setInterval(function() {
-    localStorage.setItem("ISESave", JSON.stringify(gamedata))
+    save();
 }, 15000)
 
 
@@ -113,12 +116,16 @@ function format(number, type) {
 }
 
 if (typeof savegame.DE !== "undefined") gamedata.DE = savegame.DE;
+if (typeof savegame.newgame !== "undefined") gamedata.newgame = savegame.newgame;
 if (typeof savegame.DEperclick !== "undefined") gamedata.DEperclick = savegame.DEperclick;
 if (typeof savegame.DEperclickcost !== "undefined") gamedata.DEperclickcost = savegame.DEperclickcost;
 if (typeof savegame.DEpersec !== "undefined") gamedata.DEpersec = savegame.DEpersec;
 if (typeof savegame.DEperseccost !== "undefined") gamedata.DEperseccost = savegame.DEperseccost;
 if (typeof savegame.DEperseclvl !== "undefined") gamedata.DEperseclvl = savegame.DEperseclvl;
 if (typeof savegame.lasttick !== "undefined") gamedata.lasttick = savegame.lasttick;
+if (typeof savegame.shiproomsize !== "undefined") gamedata.shiproomsize = savegame.shiproomsize;
+if (typeof savegame.shiproomused !== "undefined") gamedata.shiproomused = savegame.shiproomused;
+if (typeof savegame.shiphullsize !== "undefined") gamedata.shiphullsize = savegame.shiphullsize;
 
 
 document.addEventListener('keydown', function (e) {

@@ -12,7 +12,7 @@
         <div class="topbar">
             <div class="lefttopbar">
                 <div class="title">Idle Space Explorer</div>
-                <div class="author">by Poupy</div>
+                <div class="author">by Enamahc</div>
                 <div class="version">ver. 0.0.0.a</div>
             </div>
             <div class="midtopbar">
@@ -27,14 +27,37 @@
             </div>
         </div>
         <!--------------------CLICKER AREA---------------------------------->
-        <div class="clicker">
+        <div class="main-area">
             <div class="production-area">
                 <div class="productiontitle">Production</div>
-                <p>Dark energy per click: 1</p>
-                <p>Dark energy production: 0 /s</p>
+                <div class="ressource">
+                    <div> Dark energy per click:</div>
+                    <div class="resqty"> 1</div>
+                </div><div class="ressource">
+                    <div> Dark energy per click:</div>
+                    <div class="resqty"> 1</div>
+                </div><div class="ressource">
+                    <div> Dark energy per click:</div>
+                    <div class="resqty"> 1</div>
+                </div><div class="ressource">
+                    <div> Dark energy per click:</div>
+                    <div class="resqty"> 1</div>
+                </div><div class="ressource">
+                    <div> Dark energy per click:</div>
+                    <div class="resqty"> 1</div>
+                </div><div class="ressource">
+                    <div> Dark energy per click:</div>
+                    <div class="resqty"> 1</div>
+                </div><div class="ressource">
+                    <div> Dark energy per click:</div>
+                    <div class="resqty"> 1</div>
+                </div><div class="ressource">
+                    <div> Dark energy per click:</div>
+                    <div class="resqty"> 1</div>
+                </div>
             </div>
-            <div class="clicker_button-area">
-                <p id="DE">Dark Energy: 0</p>
+            <div class="clicker">
+                <div id="DE" class="DE">Dark Energy: 0</div>
                 <button onclick="gatherDE()" class="clicker_button"> Gather<br> Dark <br>Energy</button>
             </div>
             <div class="logbook-area">
@@ -65,8 +88,8 @@
                         <span class="buyable_title-text"> Manual Collector </span>
                         <span id="DEperclickupgradecost" class="buyable_title-price"> 10 Dark Energy </span>
                     </div>
-                    <div class="buyable_description"> Use dark energy to synthesize a better manual collector</div>
-                    <div class="buyable_effect"> Adds 1 Dark Energy per click </div>
+                    <div class="buyable_description"> Use dark energy to upgrade your manual collector</div>
+                    <span class="tooltip"> Gather 1 more Dark Energy per click </span>
                 </div>
                 <button onclick="buyDEperclick()" class="buyable_button"> Buy </button>
             </div>
@@ -78,7 +101,7 @@
                         <span id="DEpersecupgradecost" class="buyable_title-price"> 20 Dark Energy </span>
                     </div>
                     <div class="buyable_description"> Use dark energy to synthesize an automatic collector</div>
-                    <div class="buyable_effect"> Gather 1 Dark Energy per second </div>
+                    <span class="tooltip""> Each auto collector gather 1 Dark Energy per second </span>
                 </div>
                 <button onclick="buyDEpersec()" class="buyable_button"> Buy </button>
             </div>
