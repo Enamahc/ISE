@@ -76,7 +76,7 @@ body {
 .topbar_button {
   color: lightskyblue;
   font-family: 'Orbitron', sans-serif;
-  background-color: #11ffee00;
+  background-color: black;
   font-size: 1.1vh;
 }
 
@@ -96,7 +96,8 @@ body {
 .production-area {
   display: flex;
   flex-direction: column;
-  background: #fdf6e3;
+  background: black;
+  color: lime;
   opacity: .8;
   width: 30vw;
   height : 95%;
@@ -109,7 +110,7 @@ body {
   justify-content: center;
   font-size: 3vmin;
   height: 3vmin;
-  border-block-end: 3px double black;
+  border-block-end: 3px double lime;
 }
 
 .ressource {
@@ -134,8 +135,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fdf6e3;
+  background: transparent;
   border-radius: 3vmin;
+  color: lime;
   opacity: .8;
   min-width: 20vw;
   height : 28.5vh;
@@ -145,6 +147,7 @@ body {
   text-align: center;
   font-size: 2.8vmin;
   font-weight: bolder ;
+  -webkit-text-stroke: 0.2vmin black;
   height : 15%;
   padding: 1vh 10px 0 10px;
 }
@@ -177,6 +180,7 @@ body {
   border: 2px solid lime;
   color: lime;
   background: black;
+  opacity: .8;
   min-width: 25%;
   height : 95%;
 }
@@ -224,7 +228,7 @@ body {
 .tab_button {
   color: lightskyblue;
   font-family: 'Orbitron', sans-serif;
-  background-color: #11ffee00;
+  background-color: black;
   border-radius: 2px;
   font-size: 1.5vh;
   margin:5px;
@@ -236,7 +240,8 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
-  background: #fdf6e3;
+  color: lime;
+  background: black;
   height: calc(100vh - 36.5vh);
   overflow: auto;
   width: 100%;
@@ -300,9 +305,9 @@ body {
 .buyable_button {
   align-self: center;
   background: none;
-  border: 2px solid #859900;
+  border: 2px solid darkred;
   border-radius: 8px;
-  color: #859900;
+  color: darkred;
   font-size: 20px;
   height: 30px;
   width: 80px;

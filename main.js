@@ -56,7 +56,7 @@ function getlog(){
 
 function logloop() {
     if (gamedata.newgame == 1) {
-        document.getElementById("logs").value = " > Goodmorning Commander. Or evening? Wait, what time is it? Wait... what 'time' even is?"
+        document.getElementById("logs").value = " > Good morning Commander. Or evening? Wait, what time is it? Wait... what 'time' even is?"
         gamedata.newgame = 0;
     } else {
         getlog()
@@ -74,6 +74,8 @@ function buyDEperclick() {
         gamedata.DE -= gamedata.DEperclickcost
         gamedata.DEperclick += 1
         gamedata.DEperclickcost *= 2
+    } else {
+        document.getElementById("logs").value =" > Not enough resources\n" + document.getElementById("logs").value ;
     }
 }
 
@@ -82,6 +84,8 @@ function buyDEpersec() {
         gamedata.DE -= gamedata.DEperseccost
         gamedata.DEpersec += 1
         gamedata.DEperseccost = 20 + (2 ** (gamedata.DEpersec))
+    } else {
+        document.getElementById("logs").value =" > Not enough resources\n" + document.getElementById("logs").value ;
     }
 }
 
