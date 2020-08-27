@@ -1,0 +1,270 @@
+html {
+  height: 100%;
+}
+  
+body {
+  margin: 0;
+  height: 100%;
+  /*font-family: 'Do Hyeon', sans-serif;*/
+  font-family: 'Orbitron', sans-serif;
+}
+
+/*=========================TOP BAR========================*/
+.topbar {
+  display: flex;
+  height: 2.5vh;
+  width: auto;
+  border-bottom: 1px solid gray;
+  background: #002b35;
+  font-size: 1.5vh;
+  color: ghostwhite;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lefttopbar{
+  display: flex;
+  flex-direction: row;
+  align-items: self-end;
+  justify-content: center;
+}
+
+.title{
+  font-weight: bold;
+  margin: 5px;
+}
+
+.author{
+  font-size: 1.1vh;
+  margin: 5px;
+}
+
+.version{
+  font-size: 0.9vh;
+  margin: 5px;
+}
+
+.msg {
+  position: relative;
+  display: inline-block;
+}
+
+.msg .tooltip {
+  display: none;
+  width: intrinsic;           /* Safari/WebKit */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+  background-color: #024250;
+  color: #fff;
+  text-align: center;
+  padding: 1vh 1vw;
+  border-radius: 1vmin;
+  position: absolute;
+}
+
+.msg:hover .tooltip {
+  display: block;
+}
+
+.righttopbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.topbar_button{
+  color: lightskyblue;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #11ffee00;
+  font-size: 1.1vh;
+}
+
+/*=========================CLICKER AREA========================*/
+.clicker {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  background-image: url("img/space_bgnd.jpg");
+  background-size: cover;
+  height: 30vh;
+  padding-top: 3.5vh;
+}
+
+.production-area{
+  display: flex;
+  flex-direction:column;
+  align-content: left;
+  justify-content: center;
+  line-height: 0px;
+  font-size: 1.5vh;
+  text-align: left;
+  background: #fdf6e3;
+  border-radius: 3vmin;
+  opacity: .8;
+  min-width: 20%;
+  height : 95%;
+  padding: 0 5px 0 5px;
+}
+
+
+.clicker_button-area {
+  line-height: 0px;
+  font-size: 2.5vh;
+  text-align: center;
+  background: #fdf6e3;
+  border-radius: 3vmin;
+  opacity: .8;
+  min-width: 20%;
+  height : 95%;
+  padding: 0 5px 0 5px;
+}
+
+.logbook-area{
+  display: flex;
+  flex-direction:column;
+  align-content: left;
+  text-align: left;
+  border: 2px solid lime;
+  color: lime;
+  background: black;
+  min-width: 25%;
+  height : 95%;
+}
+
+.logbooktitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  text-align: left;
+  height: 3vh;
+  border-block-end: 3px double lime;
+}
+.logbook{
+  color: lime;
+  font-size: 1.5vh;
+  font-family: 'Orbitron', sans-serif;
+  background-color: black;
+  border: none;
+  height: 100%;
+  resize: none;
+  overflow: auto;
+}
+
+.clicker_button {
+  color: lightskyblue;
+  font-weight: bold;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 3.7vh;
+  -webkit-text-stroke: 2px black;
+  border: none;
+  outline: none;
+  height: calc(100% - 5vh);
+  width: 85%;
+  background-image: url("img/DEbutton.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-color: #11ffee00;
+  border-radius: 50%;
+}
+
+/*=========================TABS BAR========================*/
+
+.tabs{
+  display: flex;
+  background: #002b35;
+  height: 3vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab{
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+}
+
+.tab_button{
+  color: lightskyblue;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #11ffee00;
+  border-radius: 2px;
+  font-size: 1.5vh;
+  margin:5px;
+}
+  
+/*=========================PAGES=======================*/
+
+.menupages {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: #fdf6e3;
+  height: calc(100vh - 36.5vh);
+  overflow: auto;
+  width: 100%;
+}
+
+.menutitle{
+  display: flex;
+  font-size: 3vh;
+  text-align: center;
+  border-block-end: 3px double #002b35;
+  align-content: center;
+  justify-content: center;
+}
+
+.clicker_button-area-sub {
+  font-size: 1.8vh;
+  text-align: center;
+}
+
+.buyable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 2px solid #002b36;
+  border-radius: 8px;
+  width: 600px;
+  height: 75px;
+  margin:10px auto;
+}
+
+.buyable_amount {
+  align-self: center;
+  font-size: 24px;
+}
+
+.buyable_text {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.buyable_title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.buyable_title-text {
+  font-weight: bold;
+}
+
+.buyable_effect {
+  font-size: 12px;
+}
+
+.buyable_button {
+  align-self: center;
+  background: none;
+  border: 2px solid #859900;
+  border-radius: 8px;
+  color: #859900;
+  font-size: 20px;
+  height: 30px;
+  width: 80px;
+}
+
