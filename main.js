@@ -2,6 +2,7 @@ var savegame = JSON.parse(localStorage.getItem("ISESave"))
 
 var gamedata = {
     version: "0.0.0.a",
+    newgame: 1,
     DE: 0,
     DEperclick: 1,
     DEperclickcost: 10,
@@ -18,6 +19,7 @@ function reset() {
     window.localStorage.clear();
     document.location.reload();
     document.getElementById("logs").value = ">";
+    gamedata.newgame = 1;
 }
 
 function save() {
@@ -33,25 +35,30 @@ function tab(tab){
 tab("mainpage")
 
 var logs = new Array(
-    "> Message 1 particulièrement long pour faire un test",
-    "> Message 2 particulièrement long pour faire un test",
-    "> Message 3 particulièrement long pour faire un test",
-    "> Message 4 particulièrement long pour faire un test",
-    "> Message 5 particulièrement long pour faire un test",
-    "> Message 6 particulièrement long pour faire un test",
-    "> Message 7 particulièrement long pour faire un test",
-    "> Message 8 particulièrement long pour faire un test",
-    "> Message 9 particulièrement long pour faire un test",
-    "> Message 10 particulièrement long pour faire un test",
-    "> Message 11 particulièrement long pour faire un test" );
+    "> Donec tellus mi, luctus vitae semper ut, tristique tincidunt justo.",
+    "> Aenean porttitor aliquam molestie.",
+    "> Mauris hendrerit, nulla porta sollicitudin blandit, enim nisi blandit est, et condimentum erat augue sed eros.",
+    "> Vestibulum bibendum enim eu venenatis consectetur.",
+    "> Suspendisse scelerisque, dui eu consectetur egestas, lorem sem accumsan justo, sit amet blandit tellus lacus quis augue. Mauris volutpat vel justo ac molestie. Curabitur tempor laoreet laoreet.",
+    "> Phasellus lorem urna, maximus ut placerat nec, suscipit et elit.",
+    "> Nam pulvinar pellentesque faucibus.",
+    "> Suspendisse potenti.",
+    "> Sed aliquam nunc ex, sed eleifend lectus rhoncus ac.",
+    "> Praesent sit amet ligula urna.",
+    "> In pellentesque diam nisi, sed pulvinar neque rutrum ac. Maecenas porttitor lorem cursus, pellentesque mi ut, interdum ipsum. Sed dictum lorem pulvinar iaculis efficitur. Aliquam erat volutpat. " );
 
-function getPhrase(){
+function getlog(){
     document.getElementById("logs").value = logs[Math.floor(Math.random() * logs.length)] + "\n" + document.getElementById("logs").value ;
 }
 
 function logloop() {
-    getPhrase();
-    setTimeout(logloop, Math.random() * 10000)
+    if (gamedata.newgame == 1) {
+        document.getElementById("logs").value = "> Goodmorning Commander. Or evening? Wait, what time is it? Wait... what 'time' even is?"
+        gamedata.newgame = 0;
+    } else {
+        getlog()
+    }
+    setTimeout(logloop, Math.random() * 30000)
 }
 logloop()
 

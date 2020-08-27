@@ -92,10 +92,7 @@ body {
 
 .production-area{
   display: flex;
-  flex-direction:column;
-  align-content: left;
-  justify-content: center;
-  line-height: 0px;
+  flex-direction: column;
   font-size: 1.5vh;
   text-align: left;
   background: #fdf6e3;
@@ -103,20 +100,50 @@ body {
   opacity: .8;
   min-width: 20%;
   height : 95%;
-  padding: 0 5px 0 5px;
+}
+
+.productiontitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  text-align: left;
+  height: 3vh;
+  border-block-end: 3px double black;
 }
 
 
 .clicker_button-area {
-  line-height: 0px;
+  display: flex;
   font-size: 2.5vh;
   text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: #fdf6e3;
   border-radius: 3vmin;
   opacity: .8;
-  min-width: 20%;
-  height : 95%;
+  min-width: 20vw;
+  height : 28.5vh;
   padding: 0 5px 0 5px;
+}
+
+.clicker_button {
+  color: lightskyblue;
+  font-weight: bold;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 3.3vh;
+  -webkit-text-stroke: 0.2vmin black;
+  border: none;
+  outline: none;
+  height: calc(100% - 5vh);
+  width: 85%;
+  background-image: url("img/DEbutton.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-color: #11ffee00;
+  border-radius: 50%;
 }
 
 .logbook-area{
@@ -149,24 +176,6 @@ body {
   height: 100%;
   resize: none;
   overflow: auto;
-}
-
-.clicker_button {
-  color: lightskyblue;
-  font-weight: bold;
-  font-family: 'Do Hyeon', sans-serif;
-  font-size: 3.7vh;
-  -webkit-text-stroke: 2px black;
-  border: none;
-  outline: none;
-  height: calc(100% - 5vh);
-  width: 85%;
-  background-image: url("img/DEbutton.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
-  background-color: #11ffee00;
-  border-radius: 50%;
 }
 
 /*=========================TABS BAR========================*/
@@ -217,7 +226,7 @@ body {
 }
 
 .clicker_button-area-sub {
-  font-size: 1.8vh;
+  font-size: 1.0vh;
   text-align: center;
 }
 
