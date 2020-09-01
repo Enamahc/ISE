@@ -145,8 +145,8 @@ body {
 
 .DE {
   text-align: center;
-  font-size: 2.8vmin;
-  font-weight: bolder ;
+  font-size: 3.5vmin;
+  font-weight: 1000;
   -webkit-text-stroke: 0.2vmin black;
   height : 15%;
   padding: 1vh 10px 0 10px;
