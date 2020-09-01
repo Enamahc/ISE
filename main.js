@@ -37,7 +37,7 @@ function tab(tab){
 }
 tab("mainpage")
 
-var logs_ = new Array(
+var logs = new Array(
     " > Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy...",
     " > Aenean porttitor aliquam molestie.",
     " > Mauris hendrerit, nulla porta sollicitudin blandit, enim nisi blandit est, et condimentum erat augue sed eros.",
@@ -51,7 +51,7 @@ var logs_ = new Array(
     " > In pellentesque diam nisi, sed pulvinar neque rutrum ac. Maecenas porttitor lorem cursus, pellentesque mi ut, interdum ipsum. Sed dictum lorem pulvinar iaculis efficitur. Aliquam erat volutpat. " );
 
 function getlog(){
-    document.getElementById("logs").value = "Passing by a " + logs[Math.floor(Math.random() * logs.length)] + "\n" + document.getElementById("logs").value ;
+    document.getElementById("logs").value = "> Passing by a " + logs[Math.floor(Math.random() * logs.length)] + "\n" + document.getElementById("logs").value ;
 }
 
 function logloop() {
