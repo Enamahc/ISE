@@ -38,20 +38,146 @@ function tab(tab){
 tab("mainpage")
 
 var logs = new Array(
-    " > Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy...",
-    " > Aenean porttitor aliquam molestie.",
-    " > Mauris hendrerit, nulla porta sollicitudin blandit, enim nisi blandit est, et condimentum erat augue sed eros.",
-    " > Vestibulum bibendum enim eu venenatis consectetur.",
-    " > Suspendisse scelerisque, dui eu consectetur egestas, lorem sem accumsan justo, sit amet blandit tellus lacus quis augue. Mauris volutpat vel justo ac molestie. Curabitur tempor laoreet laoreet.",
-    " > Phasellus lorem urna, maximus ut placerat nec, suscipit et elit.",
-    " > Nam pulvinar pellentesque faucibus.",
-    " > Suspendisse potenti.",
-    " > Sed aliquam nunc ex, sed eleifend lectus rhoncus ac.",
-    " > Praesent sit amet ligula urna.",
-    " > In pellentesque diam nisi, sed pulvinar neque rutrum ac. Maecenas porttitor lorem cursus, pellentesque mi ut, interdum ipsum. Sed dictum lorem pulvinar iaculis efficitur. Aliquam erat volutpat. " );
+    "an Hypergiant star",
+    "a Supergiant star",
+    "a Bright giant star",
+    "a Giant star",
+    "a Subgiant star",
+    "a Dwarf star",
+    "a Subdwarf star",
+    "a Red dwarf star", 
+    "a Brown dwarf star",
+    "a White dwarf star",
+    "a Protostar",
+    "a T Tauri star",
+    "a Neutron star",
+    " Black hole");
 
-function getlog(){
-    document.getElementById("logs").value = "> Passing by a " + logs[Math.floor(Math.random() * logs.length)] + "\n" + document.getElementById("logs").value ;
+var spectral = new Array(
+    " - Spectral type : O",
+    " - Spectral type : B",
+    " - Spectral type : A",
+    " - Spectral type : F",
+    " - Spectral type : G",
+    " - Spectral type : K",
+    " - Spectral type : M",
+    " - Spectral type : D",
+)
+
+function getlog() {
+    b = Math.random();
+    console.log(b);
+    a = "test";
+    if (b <= 0.71) {
+        b = Math.random();
+        if (b <= 0.7645) {
+            a = logs[7] + spectral[6];
+        } else if ( b <= 0.8855) {
+            a = logs[5] + spectral[5];
+        } else if ( b <= 0.9615) {
+            a = logs[5] + spectral[4];
+        } else if ( b <= 0.9915) {
+            a = logs[5] + spectral[3];
+        } else if ( b <= 0.9975) {
+            a = logs[5] + spectral[2];
+        } else if ( b <= 0.9988) {
+            a = logs[5] + spectral[1];
+        } else {
+            a = logs[5] + spectral[0];
+        } 
+    } else if (b <= 0.79) {
+        b = Math.random();
+        if (b <= 0.5) {
+            a = logs[3] + spectral[6];
+        } else {
+            a = logs[3] + spectral[5];
+        }
+    } else if (b <= 0.83) {
+        b = Math.random();
+        if (b <= 0.3333334) {
+            a = logs[4] + spectral[4];
+        } else if ( b <= 0.6666667) {
+            a = logs[4] + spectral[3];
+        } else {
+            a = logs[4] + spectral[5];
+        }
+    } else if (b <= 0.87) {
+        a = logs[9] + spectral[7];
+    } else if (b <= 0.88) {
+        b = Math.random();
+        if (b <= 0.5) {
+            a = logs[2] + spectral[6];
+        } else {
+            a = logs[2] + spectral[5];
+        }
+    } else if (b <= 0.91) {
+        a = logs[10];
+    } else if (b <= 0.93) {
+        a = logs[11];
+    } else if (b <= 0.95) {
+        a = logs[12] + spectral[7];
+    } else if (b <= 0.96) {
+        b = Math.random();
+        if (b <= 0.7645) {
+            a = logs[1] + spectral[6];
+        } else if ( b <= 0.8855) {
+            a = logs[1] + spectral[5];
+        } else if ( b <= 0.9615) {
+            a = logs[1] + spectral[4];
+        } else if ( b <= 0.9915) {
+            a = logs[1] + spectral[3];
+        } else if ( b <= 0.9975) {
+            a = logs[1] + spectral[2];
+        } else if ( b <= 0.9988) {
+            a = logs[1] + spectral[1];
+        } else {
+            a = logs[1] + spectral[0];
+        } 
+    } else if (b <= 0.97) {
+        b = Math.random();
+        if (b <= 0.7645) {
+            a = logs[6] + spectral[6];
+        } else if ( b <= 0.8855) {
+            a = logs[6] + spectral[5];
+        } else if ( b <= 0.9615) {
+            a = logs[6] + spectral[4];
+        } else if ( b <= 0.9915) {
+            a = logs[6] + spectral[3];
+        } else if ( b <= 0.9975) {
+            a = logs[6] + spectral[2];
+        } else if ( b <= 0.9988) {
+            a = logs[6] + spectral[1];
+        } else {
+            a = logs[6] + spectral[0];
+        } 
+    } else if (b <= 0.98) {
+        a = logs[8];
+    } else if (b <= 0.99) {
+        b = Math.random();
+        if (b <= 0.99) {
+            a = "a" + logs[13];
+        } else {
+            a = "a supermassive" + logs[13];
+        }
+    } else if (b <= 1) {
+        b = Math.random();
+        if (b <= 0.7645) {
+            a = logs[0] + spectral[6];
+        } else if ( b <= 0.8855) {
+            a = logs[0] + spectral[5];
+        } else if ( b <= 0.9615) {
+            a = logs[0] + spectral[4];
+        } else if ( b <= 0.9915) {
+            a = logs[0] + spectral[3];
+        } else if ( b <= 0.9975) {
+            a = logs[0] + spectral[2];
+        } else if ( b <= 0.9988) {
+            a = logs[0] + spectral[1];
+        } else {
+            a = logs[0] + spectral[0];
+        } 
+    }
+    document.getElementById("logs").value = "> Passing by " + a + "\n" + document.getElementById("logs").value ;
 }
 
 function logloop() {
@@ -61,7 +187,7 @@ function logloop() {
     } else {
         getlog()
     }
-    setTimeout(logloop, Math.random() * 30000)
+    setTimeout(logloop, Math.random() * 50000)
 }
 logloop()
 
